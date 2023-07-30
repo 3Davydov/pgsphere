@@ -213,7 +213,7 @@ select 'spath && sline', 'f' as expected, spath'{ (-10d, 0d),(10d, 0d),(45d, 15d
 select 'spath && sline', 'f' as expected, spath'{ (-10d, 0d),(10d, 0d),(45d, 15d) }' && sline( spoint'(0d, 10d)', spoint'(0d, -10d)') as actual;
 
 -- the path and line match
-select 'spath && sline', 'f' as expected, spath'{ (-10d, 0d),(10d, 0d),(45d, 15d) }' && sline( spoint'(0d, 10d)', spoint'(0d, -10d)') as actual;
+select 'spath && sline', 'f' as expected, spath'{ (0d, 10d),(0d, -10d) }' && sline( spoint'(0d, 10d)', spoint'(0d, -10d)') as actual;
 
 -- the line lies completely in the opened path and they have an intersection at the boundary point
 select 'spath && sline', 'f' as expected, spath'{ (-10d, 0d),(10d, 0d),(45d, 15d),(60d, 20d) }' && sline( spoint'(-10d, 0d)', spoint'(10d, 0d)') as actual;
